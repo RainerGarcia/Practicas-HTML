@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>prueba de formularios</title>
+</head>
+<body style="background: lightslategrey;">
+
+	<h2>FORMULARIOS EN HTML</h2>
+	<form action="algo.html">
+
+		<h3>tipos de input</h3>
+		<fieldset>
+			<legend>Distintos inputs</legend>
+			<label for="name">Nombre*</label>
+			<input id="name" name="nombre" placeholder="tu nombre completo" required autofocus>
+			<div>
+				<label>selecciona el boton</label>
+				<input type="button" name="inputbutton" value="jalame el dedo">
+			</div>
+			
+			<div><label>fecha*</label><input type="date" name="date" required></div>
+			
+			<div><input type="datetime-local" name="datetimelocale"></div>
+			
+			<div><input type="time" name="tiempo"></div>
+			
+			<div><input type="month" name="mes"></div>
+			
+			<div><input type="week" name="semana"></div>
+			
+			<div><label>busqueda</label>
+				<input type="search" name="busqueda" placeholder="buscar"></div>
+			
+			<div><label>telefono*</label>
+				<input type="tel" name="telephone" placeholder="tu numero telefonico" required></div>
+			
+			<div><label>email*</label>
+				<input type="email" name="email" placeholder="introduce tu correo" required></div>
+			
+			<div><label>contraseña*</label>
+				<input type="password" name="pass" placeholder="contraseña" required></div>
+			
+			<div><label>enviar formulario</label>
+				<input type="submit" name="enviar"></div>
+			
+			<div><label>url</label>
+				<input type="url" name="url"></div>
+			
+			<div><label>color</label>
+				<input type="color" name="colores"></div>
+			
+			<div><label>numero</label>
+				<input type="number" name="numero" placeholder="numeros" min="5" max="10"></div>
+			
+			<div><label>rango</label>
+				<input type="range" name="rango" step="5" min="0" max="30"></div>
+			
+			<div><label>reset</label>
+				<input type="reset" name="restet"></div>
+			
+			<div><label>texto</label>
+				<input type="text" name="texto" minlength="5" maxlength="7" required></div>
+			
+			<div><h2>inputs de seleccion</h2></div>
+			<div><label>tipo radio 1</label>
+				<input type="radio" name="redio" value="radio 1">
+				<label>tipo radio 2</label>
+				<input type="radio" name="redio" checked value="radio 2">
+				<label>tipo radio 3</label>
+				<input type="radio" name="redio" value="radio 3">
+				<!-- en el tipo radio para colocar una seleccion unica en varios input tipo radio debemos de colocar el mismo name en cada input para que el navegador los reconozca como del mismo tipo
+					el atributo checked es para indicar la seleccion de radio por defecto
+					importante para ayudar a la base de datos que cada input radio tenga un atributo value con el valor que representa cada uno-->
+			</div>
+
+			<div><label>checkbox 1</label>
+				<input type="checkbox" name="check" value="check 1"></div>
+
+			<div><label>
+				<input type="checkbox" name="check" value="check 2" checked>
+				checkbox 2</label>
+			</div>
+
+			<div>
+				<input type="checkbox" name="check" value="check 3">
+				<label>checkbox 3</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>tipos de select</legend>
+			<div><label>select1</label>
+				<select name="lenguajes">
+					<option value=""></option>
+					<option value="introduce un valor" selected>un valor</option>
+					<option value="HTML">HTML</option>
+					<option value="CSS">CSS</option>
+					<option value="JAVA">JAVA</option>
+				</select>
+			</div>
+
+			<div><label>select2</label>
+				<select name="lenguajes" multiple>
+					<option value=""></option>
+					<option value="HTML">HTML</option>
+					<option value="CSS">CSS</option>
+					<option value="JAVA">JAVA</option>
+				</select>
+			</div>
+
+			<div><label>Animales</label>
+				<select name="lenguajes">
+					<optgroup label="Domesticos">
+						<option value="Perro">Perro</option>
+						<option value="Gato">Gato</option>
+						<option value="Conejo">Conejo</option>
+					</optgroup>
+
+					<optgroup label="De Granja">
+						<option value="Vaca">Vaca</option>
+						<option value="Cerdo">Cerdo</option>
+						<option value="Pollo">Pollo</option>
+					</optgroup>
+
+					<optgroup label="Aves">
+						<option value="Loro">Loro</option>
+						<option value="Guacamaya">Guacamaya</option>
+						<option value="Canario">Canario</option>
+					</optgroup>
+				</select>
+			</div>
+
+			<div>
+				<label>Select tipo datalist y/o list</label>
+				<!-- tambien se le conoce como select con filtro, porque puedes escribir una letra o palabra o silaba etc y el datalist te mostrara las selecciones que tengan esa letra palabra o silabas etc
+				-->
+				<input type="list" list="pais">
+				<datalist id="pais">
+					<option value="prueba 1"></option>
+					<option>prueba 2</option>
+					<option value="prueba 3">prueba 3</option>
+					<option value="EEUU"></option>
+					<option value="VENEZUELA"></option>
+					<option value="INDIA"></option>
+					<option value="CHINA"></option>
+					<option value="ARGENTINA"></option>
+				</datalist>
+			</div>
+		</fieldset>
+
+		<label>enviar CV ( Prueba de input tipo file)</label>
+		<input type="file" name="file" value="enviar CV">
+		<div>
+			<labek>Contador con meter
+				<meter id="fuel" min="0" max="10" value="4" low="5" high="6" optimum="8"></meter>
+			</label>
+		</div>
+		<div>
+			<label>Contador con progress
+				<progress value="75" max="100">
+			</label>
+		</div>
+		<div>
+			<label>textarea
+				<textarea cols="30" rows="20"></textarea>
+			</label>
+		</div>
+		<div><input type="text" name="texto" value="Eres maravilloso" readonly></div>
+		<div><input type="text" name="texto" value="Este campo fue eliminado" disabled></div>
+		<div><button>Enviar</button></div>
+
+
+	</form>
+
+	<!-- 
+	el datetime-local funciona como un date normal pero se puede agregar hora y minuto, pero tiene la desventaja de que no funciona en firefox
+
+	se usa div para colocar cada label e input por bloque. sin el div se irian acoplando en la misma linea
+	
+	es importante asociar cada label a un input o etiqueta a utilizar, para hacerlo la etiqueta o input debe tener su id o name, y en el label se debe colocar el atributo for + el nombre del id o name del input o etiqueta, asi tienes a ambos asociados
+
+	IMPORTANTE! todos los formularios deben tener el atributo name para que la pagina web o el navegador sepa bien que esta enviando, lo que coloques de name sera lo que llegue a la base de datos, por ejemplo input name"nombre", en la pagina web se enviara como www.algo.html?nombre=tuNombre, y esa info nombre = tuNombre es lo que se anexará en la base de datos, atributo nombre, dato "tuNombre"
+	-->
+
+
+
+</body>
+</html>

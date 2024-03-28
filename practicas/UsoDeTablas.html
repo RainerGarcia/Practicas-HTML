@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>tablas, como usarlas</title>
+	<style type="text/css">
+		td {
+			background-color: steelblue;
+		}
+	</style>
+</head>
+<body style="background: sandybrown;">
+	<h1>Ejemplo de una Tabla</h1>
+
+	<table>
+		<caption><h2>horario de clases</h2></caption>
+		<thead>
+			<tr>
+				<th> </th>
+				<th> </th>
+				<th>lunes</th>
+				<th>martes</th>
+				<th>miercoles</th>
+				<th>jueves</th>
+				<th>viernes</th>
+				<th>Sabado</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="recreo" rowspan="7">HORAS ACADEMICAS</td>
+				<td>8:30 - 9:30</td>
+				<td>matematica</td>
+				<td>matematica</td>
+				<td>sociales</td>
+				<td  id="recreo" rowspan="2">matematica</td>
+				<td>matematica</td>
+				<td id="recreo" rowspan="8">SANTO</td>
+			</tr>
+			<tr>
+				<td>9:30 - 10:25</td>
+				<td>lengua</td>
+				<td>lengua</td>
+				<td>ciencia</td>
+				<td>lengua</td>
+			</tr>
+			<tr>
+				<td>10:25 - 11:20</td>
+				<td>educacion fisica</td>
+				<td>ciencias</td>
+				<td>lengua</td>
+				<td>lengua</td>
+				<td>educacion fisica</td>
+			</tr>
+			<tr>
+				<td>11:20 - 12:40</td>
+				<td id="recreo" colspan="5">RECREO</td>
+			</tr>
+			<tr>
+				<td>11:45 - 12:40</td>
+				<td>ingles</td>
+				<td>sociales</td>
+				<td>ingles</td>
+				<td>tutoria</td>
+				<td>ingles</td>
+			</tr>
+			<tr>
+				<td>12:40 - 13:35</td>
+				<td>musica</td>
+				<td>educacion fisica</td>
+				<td>plastica</td>
+				<td>religion</td>
+				<td>musica</td>
+			</tr>
+			<tr>
+				<td>13:35 - 14:30</td>
+				<td>tecnologia</td>
+				<td>frances</td>
+				<td>tecnologia</td>
+				<td>frances</td>
+				<td>tecnologia</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="5">Total de asignaturas</td>
+				<td>12</td>
+			</tr>
+		</tfoot>
+		<!-- cuando usamos th debemos usar tbody porque th es la cabecera y el tbody es el cuerpo de la cabecera de la tabla completa, solo se usa tbody cuando usamos una cabecera th en la tabla
+			tr es row o fila y td es columna
+		-->
+	</table>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html style="background-color: brown;" lang="es">
+<style type="text/css">
+	.parrafo1 {
+		color:lightgreen;
+	}
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pruebas de algunos elementos de linea</title>
+	<!--Nunca usar <br> para dar espacios entre bloques o etiquetas, es una mala práctica 
+		wbr es un salto de linea cuando el navegador necesite hacerlo por ejemplo que haya poco espacio
+		para un texto-->
+</head>
+<body>
+	
+	<p data-ejemplo = "teamo" id="pepe"><em>El dinero</em> es importante pero <strong>La Salud</strong> es mas importante <small>aún más</small></p>
+
+	<p>Tenia intención de terminarme el curso en 1 semana <wbr>(el año pasado ya había hecho tu curso de html y hice la mitad del de css)<wbr> pero estoy documentando todo lo que explicas escribiendo lo que haces <wbr>y además tratando de hacer ejemplos <wbr>muchas gracias por todo el curro que te estas pegando haciendo estos vídeos</p>
+
+
+	<p class="parrafo1"><i>vemrobpmropmroehmerh, esto es tag i que representa cursiva</i></p>
+	<p id="texto2"> un texto</p>
+	<p id="texto1"><b>dsfioagerigjseriohjnioserhnio, esto es tag b que representa negrita</b></p>
+	<p title="esto es tag u, entiendelo"><u>dfsriojerhiosernhisernhsi, esto es tag u que representa linea debajo</u></p>
+	<!-- el tag I a veces o normalmente se usa para añadir algun icono de una fuente-->
+
+	<p>cuantro elevado al cuadrado se representa así: <strong>4<sup>2</sup></strong></p>
+	<p>agua oxigenada tiene la fórmula: <strong>H<sub>2</sub>O<sub>2</sub></strong></p>
+
+	<script type="text/javascript">
+		const p = document.getElementById('texto1')
+		const h = document.getElementById("texto2")
+		const e = document.getElementById("pepe")
+		console.log(p.textContent)
+		//window.alert(h.textContent)
+		console.log(e.dataset.ejemplo)
+
+
+
+	</script>
+
+	<time datetime="2011-01-12">January 12th, 2011</time>
+
+	<button><a href="TitulosYparrafos.html">>email me</a></button>
+	<a href="http://www.milliondollarhomepage.com/" title="referencia" target="_blank">reliquia</a>
+	<a href="http://www.milliondollarhomepage.com/" title="referencia" target="_self">reliquia sin blank</a>
+
+	<nav>
+		<a href="enlaces.PNG" download="image">descargar</a>
+		<!-- si yo no coloco download o si solo coloco download sin nada escrito en ="" entonces
+			el recurso que quiero dar en el enlace no se va a descargar, solo se mostrara redireccionandose como 
+			una página tambien si coloco un enlace a un recurso absoluto y no dentro de mis archivos de mi página, en cambio si coloco el atributo como download="algo escrito" y coloco como href una direccion relativa a un recurso en mi pc entonces si realizara la descarga 
+		 -->
+		<button><a href="https://s1.ppllstatics.com/lasprovincias/www/multimedia/202112/12/media/cortadas/gatos-kb2-U160232243326NVC-1248x770@Las%20Provincias.jpg" download="gato">descargar2</a></button>
+
+
+	</nav>
+</body>
+</html>
+
+<!--
+	etiqueta nav se usa para colocar un espacio para los enlaces 
+
+	etiqueta style se usa para colocar css en la pagina, asi como la etiqueta script sirve para
+	colocar alguna funcion en javascript
+	el data importante tenerlo en cuenta, es muy importante
+	el target="_blank se usa para que al hacer click en el enlace se abra el nuevo enlace en una nueva pestaña
+	el _self viene por defecto como si no pusieras ningun target
+
+	en desarrollo preferible para cualquier recurso no html usar carpeta asset
+	-->
